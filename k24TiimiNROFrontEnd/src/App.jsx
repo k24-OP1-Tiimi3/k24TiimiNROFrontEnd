@@ -1,23 +1,35 @@
-import { useState } from 'react'
 import './App.css'
-import ProductList from './components/ProductList';
-import { AppBar, Toolbar, Typography} from '@mui/material';
+import {Link, Outlet} from 'react-router-dom';
+// import {AppBar, Toolbar, Typography} from '@mui/material';
 
 
-function App() {
+export default function App() {
 
-  return (
-    <div className="App">
-      <AppBar position="static" color=''>
-        <Toolbar>
-          <Typography variant="h6">
-            Dog Shop
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <ProductList />
+    return <div className="App">
+        <nav>
+            <Link to={"/"}> Home </Link>
+            <Link to={"/products"}> Products </Link>
+            <Link to={"/about"}> About </Link>
+            <Link to={"/login"}> Login </Link>
+        </nav>
+        <Outlet />
     </div>
-  )
 }
 
-export default App
+/*
+function App() {
+
+    return (
+        <div className="App">
+            <AppBar position="static" color=''>
+                <Toolbar>
+                    <Typography variant="h6">
+                        Dog Shop
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <ProductList/>
+        </div>
+    )
+}
+*/
