@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@mui/material": "^5.15.15",
+    "ag-grid-community": "^31.2.1",
+    "ag-grid-react": "^31.2.1"
+  }
+}
