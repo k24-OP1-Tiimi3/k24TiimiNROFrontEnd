@@ -10,7 +10,7 @@ export default function ProductList() {
     useEffect(() => fetchData(), []);
 
     const fetchData = () => {
-        fetch('http://localhost:8080/api/products/clothing')
+        fetch('http://localhost:8080/api/products')
         .then(response => response.json())
         .then(data => setProducts(data))
         .catch(err => console.error(err))
