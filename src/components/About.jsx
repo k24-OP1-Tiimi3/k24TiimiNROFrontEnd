@@ -22,7 +22,7 @@ export default function About() {
                 Thanks for joining us on this journey. Here's to wagging tails!
             </p>
             <p>
-                Sincerely Jonas, Duy, Eki, Kasper & Ponki
+                Sincerely Jonas, Duy, Eki, Kasperi & Ponki
                 <br/>
                 Business Identity Code: 1234567-8
             </p>
