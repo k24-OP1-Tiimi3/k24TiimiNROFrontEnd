@@ -1,8 +1,10 @@
+import Photo from '../assets/img/1.jpg';
+
 export default function About() {
     return (
         <>
             <h1>About</h1>
-            <img src="path_to_your_image.jpg" alt="Frenchie Photo" style={{width: '200px', height: '200px'}}/>
+            <img src={Photo} alt="Frenchie Photo" style={{width: '400px', height: '500px'}}/>
             <p>
                 Dog Store was created to deliver high-quality, functional, comfortable pet essentials at accessible
                 prices.
