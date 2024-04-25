@@ -11,23 +11,23 @@ import LogIn from "./components/LogIn.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <App/>,
         children: [
             {
-                element: <Home />,
+                element: <Home/>,
                 index: true
             },
             {
                 path: "products",
-                element: <ProductList />
+                element: <ProductList/>
             },
             {
                 path: "about",
-                element: <About />
+                element: <About/>
             },
             {
                 path: "login",
-                element: <LogIn />
+                element: <LogIn/>
             }
         ]
     }
