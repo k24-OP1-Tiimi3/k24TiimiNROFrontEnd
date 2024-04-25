@@ -17,13 +17,14 @@ export default function ProductList() {
     }
 
     const [columnDefs] = useState([
-        {field: 'title', sortable: true, filter: true},
-        {field: 'category', sortable: true, filter: true},
-        {field: 'color', sortable: true, filter: true},
-        {field: 'size', sortable: true, filter: true},
-        {field: 'price', sortable: true, filter: true},
-        {field: 'manufacturer', sortable: true, filter: true},
+        { field: 'title', sortable: true, filter: true },
+        { field: 'type.name', headerName: 'Category', sortable: true, filter: true },
+        { field: 'color', sortable: true, filter: true },
+        { field: 'size.size', headerName: 'Size', sortable: true, filter: true },
+        { field: 'price', sortable: true, filter: true },
+        { field: 'manufacturer.name', headerName: 'Manufacturer', sortable: true, filter: true },
     ]);
+    
 
     return (
         <>
