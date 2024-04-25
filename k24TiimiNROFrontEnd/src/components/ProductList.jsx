@@ -10,10 +10,10 @@ export default function ProductList() {
     useEffect(() => fetchData(), []);
 
     const fetchData = () => {
-        fetch('http://localhost:8080/api/clothes')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-            .catch(err => console.error(err))
+        fetch('http://localhost:8080/api/products/clothing')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+        .catch(err => console.error(err))
     }
 
     const [columnDefs] = useState([
