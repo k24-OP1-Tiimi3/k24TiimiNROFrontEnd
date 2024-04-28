@@ -5,9 +5,9 @@ import {AppBar, Container, Toolbar, Typography} from "@mui/material";
 
 export default function App() {
 
-    return <div className="App">
+    return <div className="App" >
 
-        <AppBar>
+        <AppBar position='static'>
             <Container maxWidth="xl">
                 <Toolbar>
                     <Typography
