@@ -47,8 +47,8 @@ export default function Home() {
                     </Carousel.Item>
                 </Carousel>
                 <div style={{ textAlign: 'center', marginTop: '20px' }}>
-                    <h2>Welcome to Dog Store</h2>
-                    <p>At Dog Store, we're dedicated to providing high-quality products for your furry friends. From comfortable beds to stylish apparel, we have everything you need to keep your dog happy and healthy. Browse our collection and treat your pup today!</p>
+                    <h2>Welcome to Dog Shop</h2>
+                    <p>At Dog Shop, we're dedicated to providing high-quality products for your furry friends. From comfortable beds to stylish apparel, we have everything you need to keep your dog happy and healthy. Browse our collection and treat your pup today!</p>
                 </div>
             </div>
         </>
