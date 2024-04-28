@@ -8,7 +8,7 @@ export default function About() {
                 <img src={Photo} alt="Frenchie Photo" style={{ maxWidth: '70%', height: 'auto' }} />
             </div>
             <p style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                Dog Store was created to deliver high-quality, functional, comfortable pet essentials at accessible
+                Dog Shop was created to deliver high-quality, functional, comfortable pet essentials at accessible
                 prices.
                 <br /><br />
                 Hello fellow dog parents! We're not the typical pet industry veterans; our journey with Dog Store began
