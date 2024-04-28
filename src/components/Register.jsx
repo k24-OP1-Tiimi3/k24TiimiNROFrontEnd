@@ -8,6 +8,8 @@ export default function Register() {
 
     useEffect(() => fetchUsers(), []);
 
+
+    // Temporary function to fetch users from the API
     const fetchUsers = () => {
         fetch('http://localhost:8080/api/appusers')
             .then(response => response.json())
@@ -15,6 +17,8 @@ export default function Register() {
             .catch(err => console.error(err))
     }
 
+
+    // ToDo: Figure out the COSR issue ASAP!
     const registerUser = async () => {
         try {
             const response = await fetch('http://localhost:8080/api/appusers', {
