@@ -7,7 +7,7 @@ export default function App() {
 
     return <div className="App" >
 
-        <AppBar position='static'>
+        <AppBar position='static' sx={{ backgroundColor: 'orange' }}>
             <Container maxWidth="xl">
                 <Toolbar>
                     <Typography
