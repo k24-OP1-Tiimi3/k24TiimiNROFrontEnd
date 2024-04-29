@@ -22,7 +22,7 @@ export default function ProductList() {
         {field: 'title', sortable: true, filter: true},
         {field: 'type.name', headerName: 'Category', sortable: true, filter: true},
         {field: 'color', sortable: true, filter: true},
-        {field: 'size.size', headerName: 'Size', sortable: true, filter: true},
+        {field: 'size.name', headerName: 'Size', sortable: true, filter: true},
         {field: 'price', sortable: true, filter: true},
         {field: 'manufacturer.name', headerName: 'Manufacturer', sortable: true, filter: true},
     ]);
