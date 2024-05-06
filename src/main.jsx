@@ -7,6 +7,7 @@ import Home from "./components/Home.jsx"
 import ProductList from "./components/ProductList.jsx";
 import About from "./components/About.jsx";
 import Register from "./components/Register.jsx";
+import DeleteRegister from "./components/DeleteRegister.jsx";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register/>
+            },
+            {
+                path: "deleteRegister",
+                element: <DeleteRegister/>
             }
         ]
     }
