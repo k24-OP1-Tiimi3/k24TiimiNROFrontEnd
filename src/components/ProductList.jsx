@@ -10,7 +10,7 @@ export default function ProductList() {
     useEffect(() => fetchData(), []);
 
     const fetchData = () => {
-        fetch('http://localhost:8080/api/products')
+        fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/products')
             .then(response => response.json())
             .then(data => {
                 setProducts(data)
