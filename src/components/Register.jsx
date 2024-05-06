@@ -1,25 +1,18 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Button, Stack, TextField} from "@mui/material";
 
 export default function Register() {
 
-    useEffect(() => fetchUsers(), []);
 
     const [user, setUser] = React.useState({username: "", password: "", role: "USER"});
 
-    const fetchUsers = () => {
-        fetch('http://localhost:8080/api/appusers')
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(err => console.error(err))
-    };
 
     const handleInputChange = (event) => {
         setUser({...user, [event.target.name]: event.target.value});
     };
 
     const registerUser = (user) => {
-        fetch('http://localhost:8080/api/appusers', {
+        fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/appusers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
