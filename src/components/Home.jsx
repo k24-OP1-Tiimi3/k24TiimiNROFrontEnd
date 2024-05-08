@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <h1>Home</h1>
-            <div style={{ maxWidth: '530px', margin: 'auto' }}>
+            <div style={{maxWidth: '530px', margin: 'auto'}}>
                 <Carousel>
                     <Carousel.Item>
                         <img
@@ -46,9 +46,11 @@ export default function Home() {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                <div style={{textAlign: 'center', marginTop: '20px'}}>
                     <h2>Welcome to Dog Shop</h2>
-                    <p>At Dog Shop, we're dedicated to providing high-quality products for your furry friends. From comfortable beds to stylish apparel, we have everything you need to keep your dog happy and healthy. Browse our collection and treat your pup today!</p>
+                    <p>At Dog Shop, we're dedicated to providing high-quality products for your furry friends. From
+                        comfortable beds to stylish apparel, we have everything you need to keep your dog happy and
+                        healthy. Browse our collection and treat your pup today!</p>
                 </div>
             </div>
         </>

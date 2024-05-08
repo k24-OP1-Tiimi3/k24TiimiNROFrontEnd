@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { Button, Stack, TextField } from "@mui/material";
+import React, {useEffect} from 'react';
+import {Button, Stack, TextField} from "@mui/material";
 
 export default function DeleteRegister() {
     useEffect(() => fetchUsers(), []);
 
-    const [user, setUser] = React.useState({ username: "", password: "" });
+    const [user, setUser] = React.useState({username: "", password: ""});
 
     const fetchUsers = () => {
         fetch('http://localhost:8080/api/appusers')
@@ -14,7 +14,7 @@ export default function DeleteRegister() {
     };
 
     const handleInputChange = (event) => {
-        setUser({ ...user, [event.target.name]: event.target.value });
+        setUser({...user, [event.target.name]: event.target.value});
     };
 
     const deleteUser = () => {
