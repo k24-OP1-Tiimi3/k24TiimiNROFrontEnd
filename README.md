@@ -1,6 +1,7 @@
 # Dog Store Frontend
 
 Wahoo!
+Hello there! This is the frontend for the Dog Store project. This project is built using React and Vite.
 
 ## React + Vite
 
