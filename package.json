@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://k24-op1-tiimi3.github.io/k24Tiimi3FrontEnd/",
+  "homepage": "https://k24op1tiimi3.github.io/k24tiimi3frontend/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
