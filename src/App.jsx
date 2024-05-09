@@ -28,7 +28,7 @@ export default function App() {
                     <Link to={"/products"}> Products </Link>
                     <Link to={"/about"}> About </Link>
                     <Link to={"/register"}> Register </Link>
-                    {/*<Link to={"/deleteRegister"}> Delete Registration </Link>*/}
+                    <Link to={"/deleteRegister"}> Delete Registration </Link>
                 </nav>
             </Toolbar>
         </AppBar>
@@ -37,4 +37,4 @@ export default function App() {
             <Outlet/>
         </Container>
     </div>
-};
+}

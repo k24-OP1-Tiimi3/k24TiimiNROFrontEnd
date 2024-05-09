@@ -12,7 +12,7 @@ export default function Register() {
     };
 
     const registerUser = (user) => {
-        fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/appusers', {
+        fetch('http://localhost:8080/api/appusers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
