@@ -11,27 +11,28 @@ import DeleteRegister from "./components/DeleteRegister.jsx";
 
 const router = createHashRouter([
     {
-        path: "/",
+        path: '/',
         element: <App/>,
         children: [
             {
+                path: '',
                 element: <Home/>,
                 index: true
             },
             {
-                path: "products",
+                path: 'products',
                 element: <ProductList/>
             },
             {
-                path: "about",
+                path: 'about',
                 element: <About/>
             },
             {
-                path: "register",
+                path: 'register',
                 element: <Register/>
             },
             {
-                path: "deleteRegister",
+                path: 'deleteRegister',
                 element: <DeleteRegister/>
             }
         ]

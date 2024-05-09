@@ -1,40 +1,32 @@
 import './App.css'
 import {Link, Outlet} from 'react-router-dom';
-import {AppBar, Container, Toolbar, Typography} from "@mui/material";
+import {AppBar, CssBaseline, Toolbar, Typography} from "@mui/material";
 
 
 export default function App() {
-
-    return <div className="App">
-
-        <AppBar position='static' sx={{backgroundColor: 'orange'}}>
-
+    return <div>
+        <AppBar position='static' style={{backgroundColor: 'orange'}}>
+            <CssBaseline/>
             <Toolbar>
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="a"
-                    sx={{
-                        mr: 2,
-                        display: {xs: 'none', md: 'flex'},
-                        fontWeight: 700,
-                        letterSpacing: '2%',
-                        color: 'inherit',
-                        textDecoration: 'none',
-                    }}
-                >Dog Shop</Typography>
+                <Typography variant="h6" style={{
+                    marginRight: '2%',
+                    display: 'flex',
+                    fontWeight: 700,
+                    letterSpacing: '2%',
+                    color: 'inherit',
+                    textDecoration: 'none'
+                }}>
+                    Dog Shop
+                </Typography>
                 <nav>
-                    <Link to={"/"}> Home </Link>
-                    <Link to={"/products"}> Products </Link>
-                    <Link to={"/about"}> About </Link>
-                    <Link to={"/register"}> Register </Link>
-                    <Link to={"/deleteRegister"}> Delete Registration </Link>
+                    <Link to="/"> Home </Link>
+                    <Link to="/products"> Products </Link>
+                    <Link to="/about"> About </Link>
+                    <Link to="/register"> Register </Link>
+                    <Link to="/deleteRegister"> Delete Registration </Link>
                 </nav>
             </Toolbar>
         </AppBar>
-        <Container maxWidth="xl">
-
-            <Outlet/>
-        </Container>
+        <Outlet/>
     </div>
 }

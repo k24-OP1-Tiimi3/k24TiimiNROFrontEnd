@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Button, Stack, TextField } from "@mui/material";
+import {useState} from 'react';
+import {Button, Stack, TextField} from "@mui/material";
 
 export default function DeleteRegister() {
     const [userId, setUserId] = useState("");
@@ -16,14 +16,14 @@ export default function DeleteRegister() {
                 'Content-Type': 'application/json',
             }
         })
-        .then(response => {
-            if (response.ok) {
-                setDeleted(true);
-            } else {
-                console.error("Failed to delete user");
-            }
-        })
-        .catch(err => console.error(err));
+            .then(response => {
+                if (response.ok) {
+                    setDeleted(true);
+                } else {
+                    console.error("Failed to delete user");
+                }
+            })
+            .catch(err => console.error(err));
     };
 
     return (
