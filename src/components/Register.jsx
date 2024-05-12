@@ -10,6 +10,25 @@ export default function Register() {
         setUser({...user, [event.target.name]: event.target.value});
     };
 
+    const validateInput = () => {
+        if (user.username === "" || user.password === "") {
+            setSnackbar({open: true, msg: "Username and password cannot be empty"});
+            return false;
+        }
+        if (user.password.length < 5) {
+            setSnackbar({open: true, msg: "Password must be at least 5 characters long"});
+            return false;
+        }
+        return true;
+    };
+
+
+    const handleRegisterClick = () => {
+        if (validateInput()) {
+            registerUser(user);
+        }
+    };
+
     const registerUser = async (user) => {
         // TODO: VAIHDA URL RAHDIN URLIIN!!!
         try {
@@ -21,6 +40,7 @@ export default function Register() {
             });
             if (response.ok) {
                 setSnackbar({open: true, msg: "User registered successfully!"});
+                setUser({username: "", password: "", role: "USER"});
             } else {
                 setSnackbar({open: true, msg: "Failed to register user"});
             }
@@ -29,7 +49,7 @@ export default function Register() {
         }
     };
 
-    return (<>
+    return <>
         <h2 style={{textAlign: 'center', marginTop: '20px'}}>Register:</h2>
         <br/>
         <Stack direction="column" spacing={2} justifyContent="center" alignItems="center">
@@ -49,7 +69,7 @@ export default function Register() {
             />
         </Stack>
         <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
-            <Button onClick={() => registerUser(user)}>Register</Button>
+            <Button onClick={handleRegisterClick}>Register</Button>
         </Stack>
         <Snackbar
             open={snackbar.open}
@@ -57,5 +77,5 @@ export default function Register() {
             onClose={() => setSnackbar({open: false, msg: ""})}
             message={snackbar.msg}
         />
-    </>);
+    </>;
 }
