@@ -15,12 +15,12 @@ export default function App() {
         switch (currentPage) {
             case 'Home':
                 return <Home/>;
+            case 'ProductList':
+                return <ProductList/>;
             case 'About':
                 return <About/>;
             case 'Register':
                 return <Register/>;
-            case 'ProductList':
-                return <ProductList/>;
             default:
                 return <Home/>;
         }
