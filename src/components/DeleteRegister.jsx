@@ -9,21 +9,20 @@ export default function DeleteRegister() {
         setUserId(event.target.value);
     };
 
-    const deleteUser = () => {
-        fetch(`http://localhost:8080/api/appusers/${userId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-            .then(response => {
-                if (response.ok) {
-                    setDeleted(true);
-                } else {
-                    console.error("Failed to delete user");
-                }
+    const handleDelete = async (userId) => {
+        try{
+            const response = await fetch(`http://localhost:8080/api/appusers/${userId}`, {
+                method: 'DELETE'
             })
-            .catch(err => console.error(err));
+            if (response.ok) {
+                setDeleted(true);
+            } else {
+                console.error("Failed to delete user");
+            }
+        } catch (error) {
+            console.error("Failed to delete user, error: ", error);
+        }
+
     };
 
     return (
@@ -38,7 +37,7 @@ export default function DeleteRegister() {
                 />
             </Stack>
             <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
-                <Button onClick={deleteUser}>Delete</Button>
+                <Button onClick={() => handleDelete(userId)}>Delete</Button>
             </Stack>
             {deleted && <p>User deleted successfully</p>}
         </>
