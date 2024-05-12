@@ -3,20 +3,27 @@ import {AgGridReact} from "ag-grid-react";
 
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
+import {Snackbar} from "@mui/material";
 
 export default function ProductList() {
     const [products, setProducts] = useState([]);
+    const [snackbar, setSnackbar] = useState({open: false, msg: ""});
 
-    useEffect(() => fetchData(), []);
 
-    const fetchData = () => {
-        fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/products')
-            .then(response => response.json())
-            .then(data => {
-                setProducts(data)
-            })
-            .catch(err => console.error(err))
-    }
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        // TODO: VAIHDA URL RAHDIN URLIIN!!!
+        try {
+            const response = await fetch('http://localhost:8080/api/products');
+            const data = await response.json();
+            setProducts(data);
+        } catch (error) {
+            setSnackbar({open: true, msg: "Fetch failed!"});
+        }
+    };
 
     const [columnDefs] = useState([
         {field: 'title', sortable: true, filter: true},
@@ -30,15 +37,19 @@ export default function ProductList() {
 
 
     return (
-        <>
-            <div className="ag-theme-material" style={{width: 1280, height: 1000}}>
-                <AgGridReact
-                    rowData={products}
-                    columnDefs={columnDefs}
-                    pagination={true}
-                    paginationPageSize={10}
-                />
-            </div>
-        </>
+        <div className="ag-theme-material" style={{width: 1280, height: 1000}}>
+            <AgGridReact
+                rowData={products}
+                columnDefs={columnDefs}
+                pagination={true}
+                paginationPageSize={10}
+            />
+            <Snackbar
+                open={snackbar.open}
+                autoHideDuration={3000}
+                onClose={() => setSnackbar({open: false, msg: ""})}
+                message={snackbar.msg}
+            />
+        </div>
     );
 }

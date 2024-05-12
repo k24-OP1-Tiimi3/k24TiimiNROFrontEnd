@@ -3,7 +3,7 @@ import Photo from '../assets/img/1.jpg';
 export default function About() {
     return (
         <div style={{maxWidth: '800px', margin: 'auto', padding: '0 20px'}}>
-            <h1 style={{textAlign: 'center', marginTop: '20px'}}>About</h1>
+            <h2 style={{textAlign: 'center', marginTop: '20px'}}>About:</h2>
             <div style={{textAlign: 'center', marginBottom: '20px'}}>
                 <img src={Photo} alt="Frenchie Photo" style={{maxWidth: '70%', height: 'auto'}}/>
             </div>
