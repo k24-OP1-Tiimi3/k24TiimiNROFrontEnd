@@ -10,8 +10,9 @@ export default function DeleteRegister() {
     };
 
     const handleDelete = async (userId) => {
+        // Tähän vaihettu kans URL
         try{
-            const response = await fetch(`http://localhost:8080/api/appusers/${userId}`, {
+            const response = await fetch(`http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/appusers/${userId}`, {
                 method: 'DELETE'
             })
             if (response.ok) {

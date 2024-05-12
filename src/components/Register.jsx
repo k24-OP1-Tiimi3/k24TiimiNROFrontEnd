@@ -30,9 +30,9 @@ export default function Register() {
     };
 
     const registerUser = async (user) => {
-        // TODO: VAIHDA URL RAHDIN URLIIN!!!
+        // TODO: VAIHDA URL RAHDIN URLIIN!!! -- DONE
         try {
-            const response = await fetch('http://localhost:8080/api/appusers', {
+            const response = await fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/appusers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -15,9 +15,9 @@ export default function ProductList() {
     }, []);
 
     const fetchProducts = async () => {
-        // TODO: VAIHDA URL RAHDIN URLIIN!!!
+        // TODO: VAIHDA URL RAHDIN URLIIN!!! -- DONE
         try {
-            const response = await fetch('http://localhost:8080/api/products');
+            const response = await fetch('http://k24tiimi3backend-tiimi3.rahtiapp.fi/api/products');
             const data = await response.json();
             setProducts(data);
         } catch (error) {
